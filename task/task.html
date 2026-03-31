@@ -1,0 +1,46 @@
+<p>task works!</p>
+<h1>TASK DETAILS</h1>
+<form>
+    <input type="text" [(ngModel)]="newtask.title" name="title"placeholder="enter task name"/>
+    <input type="text" [(ngModel)]="newtask.description" name="description"   placeholder="enter task description"/>
+    <input type="text" [(ngModel)]="newtask.completed" name="completed" placeholder="enter task status"/>
+    <button (click)="SaveTask()">ADD TASK</button>
+</form>
+
+
+
+
+<table border="1" [width]="1000">
+    <thead>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>DESCRIPTION</th>
+        <th>STATUS</th>
+        <th>ACTIONS</th>
+        <th>ACTIONS</th>
+    </thead>
+
+    <tbody>
+        
+            @for(item of tasks;track $index){
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.completed}}</td>
+            <td>
+                <button class="id1" (click)="Edit(item.id)">
+                    EDIT
+                </button>
+            </td>
+            <td>
+                <button class="id2" (click)="OnDelete(item.id)">
+                    DELETE
+                </button>
+            </td>
+        </tr>
+            }
+           
+    </tbody>
+</table>
+

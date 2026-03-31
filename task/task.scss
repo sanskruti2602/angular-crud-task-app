@@ -1,0 +1,138 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  padding: 32px;
+  background: #0b0f1a;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: #111827; 
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+  input {
+    flex: 1 1 220px;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #f9fafb;
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+    }
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #ffffff;
+    transition: transform 0.1s, box-shadow 0.1s, opacity 0.2s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111827;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65);
+
+  thead {
+    background: #020617;
+
+    th {
+      padding: 16px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      text-align: left;
+      border-bottom: 1px solid #1f2937;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #0f172a;
+      }
+    }
+
+    td {
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #e5e7eb;
+      border-bottom: 1px solid #1f2937;
+    }
+  }
+}
+
+
+table button {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+
+
+.id1{
+    background-color: rgb(116, 138, 238);
+    &:hover{
+        background-color: rgb(79, 79, 231);
+    }
+}
+
+.id2{
+    background-color: rgb(255, 69, 69);
+    &:hover{
+        background-color: rgb(238, 49, 49);
+    }
+}
